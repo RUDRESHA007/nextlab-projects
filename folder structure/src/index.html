@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>file structure</title>
+</head>
+<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<body>
+ 
+
+  <!-- action page  -->
+  <div class="action_page">
+    <form action="/create_folder" method="POST" class='action '>
+      <h1>create folder</h1>
+      <i class="fa-solid fa-xmark"></i>
+      <div class="field">
+        <label>enter location(note: use this ' / ' and  '\' only):</label>
+        <input type="text" name="location" placeholder="enter location">
+      </div>
+      <div class="field">
+        <label> Folder name:</label>
+        <input type="text" name="folder_name" placeholder="folder Name">
+      </div>
+
+      <input type="submit" class='button' value="Create">
+    </form>
+
+    <!-- create file  -->
+
+    <form action="/create" method="POST" class='action  '>
+      <h1>create File</h1>
+      <i class="fa-solid fa-xmark"></i>
+
+      <div class="field">
+        <label>enter location(note: use this ' / ' and  '\' only):</label>
+        <input type="text" name="location" placeholder="enter location">
+      </div>
+      <div class="field">
+        <label> File name:</label>
+        <input type="text" name="fileName" placeholder="File Name">
+      </div>
+
+      <div class="field">
+        <label>enter something:</label>
+
+        <input type="text" name="content" placeholder="enter something">
+      </div>
+      <input type="submit" class='button' value="Create">
+    </form>
+
+    <!-- edit file  -->
+    <form action="/update" method="POST" class='action  '>
+      <h1>Edit File</h1>
+      <i class="fa-solid fa-xmark"></i>
+      <div class="field">
+        <label>enter location(note: use this ' / ' and  '\' only):</label>
+        <input type="text" name="location" placeholder="enter location">
+      </div>
+      <div class="field">
+        <label>File name:</label>
+        <input type="text" name="fileName" placeholder="File Name">
+      </div>
+
+      <div class="field">
+        <label>enter something:</label>
+
+        <input type="text" name="content" placeholder="enter something">
+      </div>
+      <input type="submit" class='button' value="Update">
+    </form>
+
+    <!-- delete file  -->
+
+    <form action="/delete" method="POST" class='action  '>
+      <h1>delete file</h1>
+      <i class="fa-solid fa-xmark"></i>
+      <div class="field">
+        <label>enter location(note: use this ' / ' and  '\' only):</label>
+        <input type="text" name="location" placeholder="enter location">
+      </div>
+      <div class="field">
+        <label> File name:</label>
+        <input type="text" name="fileName" placeholder="File Name">
+      </div>
+      <input type="submit" class='button' value="Delete">
+    </form>
+
+    <!-- delete folder  -->
+    <form action="/delete_folder" method="POST" class='action  '>
+      <h1>delete folder</h1>
+      <i class="fa-solid fa-xmark"></i>
+      <div class="field">
+        <label>enter location(note: use this ' / ' and  '\' only):</label>
+        <input type="text" name="location" placeholder="enter location">
+      </div>
+      <div class="field">
+        <label> Folder name:</label>
+        <input type="text" name="folder_name" placeholder="folder Name">
+      </div>
+      <input type="submit" class='button' value="Delete">
+    </form>
+
+    <!-- see folder structure in json format -->
+    <form action="/structure" method="POST" class='action '>
+      <h1>see folder structure</h1>
+
+      <i class="fa-solid fa-xmark"></i>
+
+      <div class="field">
+        <label>enter Location:</label>
+        <input type="text" name="location" placeholder="enter location">
+      </div>
+      <input type="submit" class='button' value="submit">
+    </form>
+  </div>
+
+  <div class="container">
+    <h1>File Manager</h1>
+    <h3>select any option</h3>
+
+    <div class="actions">
+
+      <button class="create_folder_btn action_btn">Create folder</button>
+      <button class="create_file_btn action_btn">Create file</button>
+      <button class="update_file_btn action_btn">update file</button>
+      <button class="delete_file_btn action_btn">delete file</button>
+      <button class="delete_folder_btn action_btn">delete folder</button>
+      <button class="structure_btn action_btn"> folder structure </button>
+    </div>
+  </div>
+  <!-- create folder  -->
+<script src="script.js"></script>
+</body>
+
+</html>

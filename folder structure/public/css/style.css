@@ -1,0 +1,180 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Castoro+Titling&family=Caveat&family=Dancing+Script&family=Delicious+Handrawn&family=Fasthand&family=Poppins:wght@500&family=Satisfy&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+ overflow: hidden;
+    height: 100vh;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    flex-direction: column;
+    position: relative;
+   
+    
+
+
+}
+.container h1{
+    position: absolute;
+    top:-10rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    color: rgba(65, 8, 171, 0.799);
+    /* border-bottom: .01rem solid rgb(18, 9, 190); */
+}
+.container h3{
+    padding: 1rem;
+    color: blueviolet;
+}
+
+
+.container .actions{
+    width: 100%;
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    border: .1rem;
+    padding: 1rem;
+    /* height: 0rem; */
+    /* background-color: #8f3e3e; */
+}
+.container .actions button,.button{
+    /* height: 2rem; */
+    width: 11rem;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    color: white;
+    /* font-size: 1rem; */
+    font-weight: 500;
+    background-color: rgba(0, 0, 255, 0.799);
+    transition: .5s ease;
+}
+.container .actions button:hover{
+    background-color: rgba(2, 2, 158, 0.799);
+    cursor: pointer;
+    transform: scale(1.1);
+   
+}
+.action_page {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0rem;
+    /* z-index: 10; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+ .action_page .action {
+    flex-wrap: wrap;
+    padding: 1rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 50%;
+    border-radius: 1rem;
+    /* height: 45%; */
+    background-color: #ffffff;
+    z-index: 1;
+    position: relative;
+    transition: .5s ease-in-out;
+    animation: ani 1s ease-in-out;
+    box-shadow: .1rem .1rem .9rem  rgba(52, 48, 48, 0.739);
+}
+i{
+
+    position: absolute;
+    
+    /* color: red; */
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    
+    top: 1rem;
+    
+    right: 2rem;
+    }
+.action_page .action h1{
+    width: 100%;
+    padding: .5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(18, 18, 158);
+}
+.action_page .action .field{
+    width: 70%;
+    height:6rem;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
+.action_page .action .field label{
+padding:  1rem 0;
+font-size: 1.1rem;
+
+color: rgb(18, 18, 158);
+
+text-transform: capitalize;
+
+}
+.action_page .action .field input{
+    padding: .7rem;
+    border-radius: .5rem;
+    border: none;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    outline: none;
+    background-color: #eae5e5;
+}
+.action_page .action  .button{
+    padding: .7rem;
+    width: 15rem;
+    margin: 1rem 0;
+    border-radius: .5rem;
+    border: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    outline: none;
+}
+.button:hover{
+    background-color: rgba(2, 2, 158, 0.799);
+    cursor: pointer;
+}
+.action_page  .hide{
+    display: none;
+}
+
+@keyframes ani {
+    from{
+        opacity: 0;
+            
+    }
+    to{
+        opacity: 1;
+            
+    }
+}

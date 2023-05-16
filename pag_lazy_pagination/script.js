@@ -5,7 +5,7 @@ const limit = 10;
 const load = async ()=> {
 
     loader.style.display = "block";
-    //fetch api
+    //fetch api from themealdb.com
     const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood&page=${page}&per_page=${limit}`)
     const data = await response.json();
     console.log(data.meals);
@@ -25,7 +25,7 @@ const load = async ()=> {
 }
 
 load();
-
+//when scroll the page the loader is loading
 window.addEventListener('scroll', () => {
   const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
   if (scrollTop + clientHeight >= scrollHeight - 5) {

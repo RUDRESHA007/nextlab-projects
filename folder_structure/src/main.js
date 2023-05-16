@@ -3,14 +3,16 @@ const app = express();
 const bodyParser = require('body-parser');
 const fs = require("fs");
 const url = require('url');
+const port_no = 4000;
 
+//path of the project initialisation
 const path = require("path");
 app.use(bodyParser.urlencoded({ extended: true }));
 let public_path = path.join(__dirname, '../public')
 app.use(express.static(public_path + '/css'))
 app.use(express.static(public_path + '/js'))
 
-
+//function for folder structure implementation
 function structure(your_path) {
 
   const name = path.basename(your_path)
@@ -53,11 +55,11 @@ function structure(your_path) {
 
 
 
+//call the folder structure function in /structure
 
 app.post('/structure', (req, res) => {
 // var your_path = "C:\\Users\\admin\\Desktop\\MyComputer";
 var location =req.body.location;
-
 const folder_structure = structure(location);
   res.send(folder_structure[1]);
 });
@@ -65,9 +67,6 @@ const folder_structure = structure(location);
 
 
 // file manager 
-
-
-
 
 // Create file
 // const location ='C:\\Users\\admin\\Desktop\\MyComputer'
@@ -149,17 +148,15 @@ app.post('/delete_folder', (req, res) => {
   });
 });
 
-// desired location 
+// desired location or home page
 
 app.get('/', (req, res) => {
-
-
   res.sendFile(__dirname + '/index.html');
 });
 
 
 
-// Start the server
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
+// Start the server on 3000 port
+app.listen(port_no, () => {
+  console.log('Server started on port 4000');
 });
